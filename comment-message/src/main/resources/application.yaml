@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    password: 123456
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://119.96.241.39:3306/comment?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+  redis:
+    host: 119.96.241.39
+    port: 6379
+    password: '000415'
+    timeout: 10000
+    lettuce:
+        pool:
+          maxActive: 128                    #最大连接数
+          maxIdle: 128                        #连接池最大空闲连接数.
+          minIdle: 5                        #连接池最小空闲连接数.
+          max-wait: 2000                    #从连接池中获取连接时的最大等待时间
+
+  main:
+    allow-circular-references: true
+
+server:
+  port: 9001
+logging:
+  level:
+    com.comment.mapper: debug
